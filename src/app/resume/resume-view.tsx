@@ -78,6 +78,13 @@ const skillGroups = [
   ["TensorFlow", "Keras", "PyTorch", "scikit-learn", "CNN", "LSTM", "Transformers", "NLP"],
   ["Hugging Face", "LangChain", "LangGraph", "OpenAI API", "Prompt Engineering", "RAG"],
   ["Docker", "Flask", "FastAPI", "Kubernetes", "AWS", "Google Cloud", "CI/CD", "MLflow"],
+  ["Pandas", "NumPy", "Spark", "Hadoop", "Real-time Data Processing"],
+  ["MySQL", "MongoDB", "PostgreSQL", "FAISS", "Pinecone"],
+  ["Matplotlib", "Seaborn", "Power BI"],
+  ["Git", "GitHub"],
+  ["Arrays", "Strings", "Linked Lists", "Stacks", "Queues", "Trees", "Graphs", "Dynamic Programming", "Greedy", "Hashing"],
+  ["OOPS Principles", "SOLID Principles", "Design Patterns"],
+  ["Low-Level Design (LLD)", "High-Level Design (HLD)", "Scalability", "Caching"],
 ];
 
 const certifications = [
