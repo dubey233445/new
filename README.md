@@ -1,12 +1,12 @@
-# 🚀 Akash Malhotra — 3D Portfolio
+# 🚀 Ashish Dubey — 3D Portfolio
 
-Interactive 3D developer portfolio with a keyboard where every keycap is a skill. Built with Next.js, React, TypeScript, GSAP, and Motion.
+Interactive 3D portfolio for Ashish Dubey, a Computer Science undergraduate focused on backend engineering, machine learning, and AI projects. Built with Next.js, React, TypeScript, GSAP, and Motion.
 
-Forked from [Naresh Khatri's 3d-portfolio](https://github.com/Naresh-Khatri/3d-portfolio) template and customized for [Akash Malhotra](https://github.com/akashrmalhotra).
+Forked from [Naresh Khatri's 3d-portfolio](https://github.com/Naresh-Khatri/3d-portfolio) template and customized for Ashish Dubey.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/akashrmalhotra/3d-portfolio-next)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
 
-![Portfolio Preview](./public/assets/projects-screenshots/callhq/callhq.png)
+![Portfolio Preview](./public/assets/seo/og-image.png)
 
 ## ✨ Features
 
@@ -43,7 +43,7 @@ Forked from [Naresh Khatri's 3d-portfolio](https://github.com/Naresh-Khatri/3d-p
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/akashrmalhotra/3d-portfolio-next.git
+    git clone <your-repo-url>
     cd 3d-portfolio-next
     ```
 
@@ -84,15 +84,16 @@ All personal info is centralized in [`src/data/config.ts`](src/data/config.ts):
 
 ```ts
 const config = {
-  title: "Akash Malhotra | Co-Founder & Engineer",
-  author: "Akash Malhotra",
-  email: "contact@broki.in",
-  site: "https://broki.in",
-  githubUsername: "akashrmalhotra",
+  title: "Ashish Dubey | Computer Science Undergraduate",
+  author: "Ashish Dubey",
+  email: "dubeyashish8957@gmail.com",
+  site: "http://localhost:3000",
+  githubUsername: "dubey233445",
   githubRepo: "3d-portfolio-next",
   social: {
-    linkedin: "https://www.linkedin.com/in/akashrmalhotra",
-    github: "https://github.com/akashrmalhotra",
+    linkedin: "https://www.linkedin.com/in/ashish-dubey-8904a52b3/",
+    github: "https://github.com/dubey233445",
+    instagram: "https://www.instagram.com/ashish_dubey_901?utm_source=qr&igsh=eWxqNG03bW5jdXkz",
     // ...
   },
 };
@@ -104,20 +105,18 @@ Other files to customize:
 |---|---|
 | `src/data/projects.tsx` | Projects, screenshots, descriptions, and tech stacks |
 | `src/data/constants.ts` | Skills list and work experience |
-| `public/Akash_Malhotra_Resume.pdf` | Résumé PDF for the resume page |
-| `public/assets/projects-screenshots/` | Project screenshots (`callhq/`, `broki/`, etc.) |
+| `src/app/resume/resume-view.tsx` | Inline résumé content |
+| `public/assets/projects-screenshots/` | Project screenshots |
 | `public/assets/seo/og-image.png` | Social share preview image |
 
-### Projects
+### Resume Content
 
-Screenshots live under `public/assets/projects-screenshots/<project-id>/`. Current projects:
+The current content is centered around:
 
-- [CallHQ.ai](https://callhq.ai)
-- [Broki](https://broki.in)
-- [CallHQ WhatsApp](https://whatsapp.callhq.ai)
-- [Orrdr](https://orrdr.com)
-- [Otoma8](https://otoma8.com)
-- [Tesoro by Sania](https://tesorobysania.com)
+- Computer Science Engineering (AI & ML) at K R Mangalam University
+- Internships in software engineering, machine learning, and deep learning
+- Projects in computer vision, LLM + RAG, and DSA practice
+- Skills across Python, FastAPI, Flask, TensorFlow, OpenCV, LangChain, Docker, AWS, and more
 
 ---
 
@@ -160,7 +159,7 @@ These features activate automatically when the `NEXT_PUBLIC_WS_URL` environment 
 
 ## 🚀 Deployment
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/akashrmalhotra/3d-portfolio-next)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
 
 This site is deployed on **Vercel**. To deploy your own:
 
