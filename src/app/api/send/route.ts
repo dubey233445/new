@@ -3,8 +3,6 @@ import { config } from "@/data/config";
 import { Resend } from "resend";
 import { z } from "zod";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 const rateLimit = new Map<string, { count: number; resetAt: number }>();
 const RATE_LIMIT_MAX = 3;
 const RATE_LIMIT_WINDOW_MS = 60 * 1000;
@@ -25,6 +23,13 @@ const Email = z.object({
   email: z.string().email({ message: "Email is invalid!" }),
   message: z.string().min(10, "Message is too short!"),
 });
+
+function getResendClient() {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) return null;
+  return new Resend(apiKey);
+}
+
 export async function POST(req: Request) {
   try {
     const ip = req.headers.get("x-forwarded-for") ?? "unknown";
@@ -40,6 +45,14 @@ export async function POST(req: Request) {
     } = Email.safeParse(body);
     if (!zodSuccess)
       return Response.json({ error: zodError?.message }, { status: 400 });
+
+    const resend = getResendClient();
+    if (!resend) {
+      return Response.json(
+        { error: "Email service is not configured on this deployment." },
+        { status: 503 }
+      );
+    }
 
     const { data: resendData, error: resendError } = await resend.emails.send({
       from: "Porfolio <onboarding@resend.dev>",
@@ -58,6 +71,7 @@ export async function POST(req: Request) {
 
     return Response.json(resendData);
   } catch (error) {
-    return Response.json({ error }, { status: 500 });
+    const message = error instanceof Error ? error.message : "Unknown error";
+    return Response.json({ error: message }, { status: 500 });
   }
 }
